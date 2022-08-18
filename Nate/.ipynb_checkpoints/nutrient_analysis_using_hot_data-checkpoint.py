@@ -33,7 +33,7 @@ for j in np.arange(len(cols)):
     if j>0: 
         axs[j].set_yticklabels([])
 axs[0].set_ylabel('Pressure [dbar]')
-
+plt.show()
 
 # How many individual measurements do we have
 len(data)
@@ -55,6 +55,7 @@ plt.title('Gaussian Mixture Model clustering')
 for k in range(K):
     plt.plot(x_mean[k],y_mean[k],'rs',markersize=6)
     plt.annotate(str(k), (x_mean[k],y_mean[k]), fontsize=20)    
+plt.show()
 
 BIC=np.array([]);
 for K in range(1,50):
@@ -67,5 +68,5 @@ plt.title('BIC')
 plt.plot(BIC); 
 plt.xlabel('Number of classes'); 
 plt.ylabel('Bayesian information criterion (BIC)')
-
+plt.show()
 
